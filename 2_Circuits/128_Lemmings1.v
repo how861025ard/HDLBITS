@@ -10,9 +10,10 @@ module top_module(
     reg state, next_state;
 
     always @(*) begin
-        case(state)begin
+        case(state)
             LEFT : next_state = (bump_left) ? RIGHT : LEFT;
             RIGHT : next_state = (bump_right) ? LEFT : RIGHT;
+            default : next_state = LEFT; 
         endcase
     end
 
