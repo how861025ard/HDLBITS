@@ -1,9 +1,9 @@
 module top_module ( );
-	reg clk;
+    reg clk;
     
     dut m_dut(clk);
     
-	initial begin
+    initial begin
     clk = 0; 
     end
     
